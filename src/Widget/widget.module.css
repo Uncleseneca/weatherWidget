@@ -1,0 +1,186 @@
+.root {
+  width: 389px;
+  height: 464px;
+  box-shadow: 0 21px 20px 1px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  background-color: #f1f8f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  height: 328px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.refreshButton {
+  position: absolute;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  width: 21px;
+  height: 19px;
+  top: 17px;
+  right: 17px;
+  background-image: url('./refresh.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.weatherIcon {
+  display: block;
+  margin-top: 68px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weatherDecal {
+  height: 69px;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+
+.temperature {
+  display: block;
+  position: relative;
+  padding-left: 22px;
+  padding-right: 35px;
+  color: #8d9396;
+  font-size: 58px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.temperature::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #8d9396;
+  border-radius: 50%;
+  top: 20px;
+  right: 16px;
+}
+.city {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.weatherVerbose {
+  color: #bac2c6;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.cityName {
+  color: #a2a9ad;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.date {
+  align-self: stretch;
+  width: 65px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #54bae6;
+}
+
+.statsTab {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: #2e3335;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 0 0 10px 10px;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.statsTab {
+  margin-top: 46px;
+  display: flex;
+  align-self: stretch;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.tabTogglers {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tabToggler {
+  display: block;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  padding: 0;
+  border-radius: 50%;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.tabTogglerActive {
+  display: block;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.statsItem {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.wind {
+  padding-left: 40px;
+  composes: statsItem;
+  background-image: url('./shape-1.svg');
+  background-size: 29px 17px;
+}
+.sun {
+  composes: statsItem;
+  background-image: url('./shape-2.svg');
+  background-size: 16px 21px;
+}
+.humidity {
+  composes: statsItem;
+  background-image: url('./shape-3.svg');
+  background-size: 22px 22px;
+}
